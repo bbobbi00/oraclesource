@@ -670,7 +670,10 @@ SELECT
 	e.EMPNO,
 	e.ENAME,
 	e.JOB,
-	e.SAL
+	e.SAL,
+	e.LOSAL,
+	e.HISAL,
+	e.GRADE
 FROM
 	DEPT d
 LEFT OUTER JOIN EMP e ON
@@ -680,6 +683,383 @@ LEFT OUTER JOIN SALGRADE s ON
 ORDER BY
 	d.DEPTNO,
 	e.ENAME;
+
+--서브쿼리
+--SQL 문 안에 내부에서 SELECT 문을 사용
+--괄호로 묶어서 사용
+--메인쿼리의 비교 대상과 같은 자료형과 같은 개수로 지정해야 한다.
+
+--JONES 사원의 급여보다 높은 급여를 받는 사원 조회
+--JONES 급여 알아내기 => 비교
+
+SELECT SAL
+FROM EMP e
+WHERE ENAME = 'JONES';
+
+SELECT *
+FROM EMP e
+WHERE SAL > 2975;
+
+SELECT *
+FROM EMP e
+WHERE SAL > (SELECT SAL FROM EMP e 
+WHERE ENAME = 'JONES');
+
+--ALLEN 이 받는 COMM 보다 많은 추가수당을 받는 사원 조회
+
+SELECT
+	*
+FROM
+	EMP e
+WHERE
+	COMM > (
+	SELECT
+		COMM
+	FROM
+		EMP e
+	WHERE
+		ENAME = 'ALLEN');
+	
+--WARD 사원의 입사일보다 빠른 입사자 조회
+
+SELECT
+	*
+FROM
+	EMP e
+WHERE
+	HIREDATE >(
+	SELECT
+		HIREDATE
+	FROM
+		EMP e
+	WHERE
+		ENAME = 'WARD');
+	
+--20번 부서에 속한 사원 중 전체 사원의 평균 급여보다 높은 급여를 받는 사원 조회
+--사원번호, 사원명, 직무, 급여, 부서번호, 부서명, 지역
+	
+SELECT
+	E.EMPNO,
+	E.ENAME,
+	E.JOB,
+	E.SAL,
+	D.DEPTNO,
+	D.DNAME,
+	D.LOC
+FROM
+	EMP e
+JOIN DEPT d ON
+	E.DEPTNO = D.DEPTNO
+WHERE
+	E.DEPTNO = 20
+	AND E.SAL > (
+	SELECT
+		AVG(SAL)
+	FROM
+		EMP);
+
+	
+--단일행 서브쿼리: 서브쿼리 실행 결과가 단 하나의 행으로 나오는 서브쿼리
+-- 사용가능한 연산자 : <,>, =, !...
+	
+--다중행 서브쿼리: 서브쿼리 실행 결과가 여러 행으로 나오는 서브쿼리	
+-- 사용가능한 연산자 : IN, ANY(SOME), ALL, EXISTS
+--                     IN, ANY(SOME): 메인 쿼리의 조건식을 만족하는 서브쿼리가 하나이상
+-- ALL(메인쿼리의 조건식을 서브쿼리의 결가 모두가 만족)
+-- EXISTS(서브 쿼리의 결과가 존재하면)
+	
+--단일 행 하위 질의에 2개 이상의 행이 리턴되었습니다.
+--서브쿼리가 여러 개의 결과값을 리턴하는데 단일행 서브쿼리에 사용하는 연산자가 사용된 경우
+--SELECT * FROM EMP WHERE SAL >= (SELECT MAX(SAL) FROM EMP GROUP BY DEPTNO);
+	
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	SAL IN (
+	SELECT
+		MAX(SAL)
+	FROM
+		EMP
+	GROUP BY
+		DEPTNO);
+	
+--	IN 사용과 동일한 결과
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	SAL = ANY (
+	SELECT
+		MAX(SAL)
+	FROM
+		EMP
+	GROUP BY
+		DEPTNO);
+	
+--30번인 부서 사원들의 최대 급여보다 적은 급여를 받는 사원 조회
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	SAL < ANY (
+	SELECT
+		SAL
+	FROM
+		EMP
+	WHERE DEPTNO = 30);
+
+
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	SAL < ALL (
+	SELECT
+		SAL
+	FROM
+		EMP
+	WHERE DEPTNO = 30);
+
+
+SELECT
+	*
+FROM
+	EMP
+WHERE
+	 EXISTS (
+	SELECT
+		DNAME
+	FROM
+		DEPT
+	WHERE DEPTNO = 20);
+
+
+--실습1) 전체 사원 중 ALLEN과 같은 직책인 사원들의 사원정보, 부서 정보를 다음과 같이 출력하는 SQL문을 작성하시오
+
+SELECT e.EMPNO, e.DEPTNO 
+FROM EMP e 
+WHERE JOB 
+
+
+--실습2) 전체 사원의 평균 급여보다 높은 급여를 받는 사원들의 사원정보, 급여 등급 정보를 출력하는 SQL문을 작성하시오
+--(단, 출력할 때 급여가 많은 순으로 정렬하되 급여가 같은 경우에는 사원 번호를 기준으로 오름차순으로 정렬하기)
+ 	
+ 	
+ SELECT e.JOB, e.EMPNO, e.ENAME, e.SAL, d.DEPTNO, d.DNAME
+ FROM EMP e JOIN DEPT d ON e.DEPTNO = d.DEPTNO
+ WHERE e.JOB IN
+( SELECT JOB FROM EMP e
+ FROM EMP e 
+ 
+ 
+ SELECT e.EMPNO, e.ENAME, e.DNAME, e.HIREDATE , d.LOC, e.SAL, s.GRADE
+ FROM EMP e
+ JOIN DEPT d ON e.DEPTNO = d.DEPTNO 
+ JOIN SALGRADE s ON e.SAL BETWEEN s.LOSAL AND s.HISAL
+ WHERE e.SAL > (SELECT AVG(e.SAL)
+ FROM EMP e)
+ ORDER BY e.SAL DESC, e.EMPNO ASC;
+
+
+--다중 열 서브쿼리
+--부서별 급여 최대값
+SELECT *
+FROM EMP e 
+WHERE 
+WHERE (SELECT DEPTNO, MAX(SAL) FROM EMP e
+GROUP BY DEPTNO); 
+
+
+(SELECT DEPTNO, MAX(SAL))
+FROM EMP e
+GROUP BY DEPTNO;
+ 
+--FROM 절에 사용하는 서브쿼리(인라인 뷰)
+
+SELECT E10.EMPNO, E10.ENAME, E10.DEPTNO, D.DNAME, D.LOC
+FROM (SELECT * FROM EMP WHERE DEPTNO=10) E10,
+     (SELECT * FROM DEPT) D
+WHERE E10.DEPTNO= D.DEPTNO;
+
+--SELECT 절에 사용하는 서브쿼리(스칼라 서브쿼리)
+SELECT
+	EMPNO,
+	ENAME,
+	JOB,
+	SAL,
+	(
+	SELECT
+		GRADE
+	FROM
+		SALGRADE s
+	WHERE
+		E.SAL BETWEEN S.LOSAL AND S.HISAL) AS SALGRADE
+FROM
+	EMP e;
+ 	
+ 
+
+--DML(Data Manipulation Language-데이터 조작 언어)
+--SELECT(조회), INSERT(삽입), UPDATE(수정), DELETE(삭제)
+
+--기존 테이블 복제해서 새로운 테이블 생성
+CREATE TABLE DEPT_TEMP AS SELECT * FROM DEPT;
+
+--새로운 부서 추가
+--INSERT INTO 테이블명(열이름1, 열이름2...)
+--VALUES(데이터, 데이터...)
+
+INSERT INTO DEPT_TEMP(DEPTNO,DNAME,LOC)
+VALUES(60,'DATABASE', 'BUSAN');
+
+INSERT INTO DEPT_TEMP
+VALUES(70,'DATABASE', 'BUSAN');
+
+--값의 수가 충분하지 않습니다
+INSERT INTO DEPT_TEMP
+VALUES(80,'DATABASE');
+
+INSERT INTO DEPT_TEMP(DEPTNO,DNAME)
+VALUES(80,'DATABASE');
+
+
+
+--이 열에 대해 지정된 전체 자릿수보다 큰 값이 허용됩니다.
+INSERT INTO DEPT_TEMP(DEPTNO,DNAME)
+VALUES(800,'DATABASE');
+
+
+INSERT INTO DEPT_TEMP(DEPTNO,DNAME)
+VALUES(90,'DATABASE',NULL);
+
+CREATE TABLE EMP_TEMP AS SELECT * FROM EMP;
+
+INSERT INTO EMP_TEMP(EMPNO, ENAME, JOB, HIREDATE,SAL,COMM,DEPTNO)
+VALUES(8000,'HONG','MANAGER',7982,'2015-03-15,',1000,NULL,50);
+
+INSERT INTO EMP_TEMP(EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+VALUES(9000,'SUNG','MANAGER',7782,SYSDATE,1200,800,50);
+
+--테이블의 구조만 복사(데이터는 복사하지 않을 때)
+CREATE TABLE EMP_TEMP2 AS SELECT * FROM EMP WHERE 1<>1;
+
+--수정
+--UPDATE 테이블명 SET 수정할 내용, ..., ...;
+--UPDATE 테이블명 SET 수정할 내용,...,...,WHERE 조건;
+
+UPDATE DEPT_TEMP 
+SET LOC = 'BUSAN';
+
+UPDATE DEPT_TEMP 
+SET LOC = 'SEOUL'
+WHERE DEPTNO = 50;
+
+UPDATE DEPT_TEMP 
+SET LOC = 'SEOUL',DNAME='NETWORK'
+WHERE DEPTNO = 40;
+
+
+
+
+--삭제(행단위)
+--DELETE 테이블명 WHERE 조건
+--DELETE FROM 테이블명 WHERE 조건
+
+DELETE DEPT_TEMP
+WHERE DEPTNO=20;
+
+DELETE FROM DEPT_TEMP
+WHERE DEPTNO=30;
+
+
+--서브쿼리 + DELETE
+--급여등급이 3등급이고 30번 부서의 사원 삭제
+
+DELETE
+FROM
+	EMP_TEMP
+WHERE
+	EMPNO IN (
+	SELECT
+		EMPNO
+	FROM
+		EMP_TEMP et
+	JOIN SALGRADE s ON
+		et.sal BETWEEN s.losal AND s.hisal AND s.grade = 3 AND et.deptno=30);
+	
+--	서브쿼리 + UPDATE
+	UPDATE DEPT_TEMP 
+	SET (DNAME,LOC)=(SELECT DNAME,LOC FROM DEPT WHERE DEPTNO=40)
+	WHERE DEPTNO=40;
+
+
+--서브쿼리 + INSERT
+
+INSERT
+	INTO
+	EMP_TEMP (EMPTNO,
+	ENAME,
+	MGR,
+	HIREDATE,
+	SAL,
+	COMM,
+	DEPTNO)
+SELECT
+	E1.EMPNO,
+	E1.ENAME,
+	E1.JOB,
+	E1.MGR,
+	E1.HIREDATE,
+	E1.SAL,
+	E1.SAL,
+	E1.COMM,
+	E1.DEPTNO
+FROM
+	EMP E1
+JOIN SALGRADE s ON
+	E1.SAL BETWEEN S.LOSAL AND S.HISAL
+	AND S.GRADE = 1;
+
+--실습 1) 실습을 위하여 기존 테이블을 이용하여 테이블을 생성한다.
+--(1) EMP테이블의 내용을 이용하여 EXAM_EMP 생성
+--(2) DEPT테이블의 내용을 이용하여 EXAM_DEPT 생성
+--(3)SALGRADE 테이블의 내용을 이용하여 EXAM_SALGRADE 생성
+
+CREATE TABLE EXAM_EMP AS SELECT * FROM EMP;
+
+CREATE TABLE EXAM_DEPT AS SELECT * FROM DEPT;
+
+CREATE TABLE EXAM_SALGRADE AS SELECT * FROM SALGRADE;
+
+--실습2) 다음의 정보를 EXAM_EMP 테이블에 입력하시오.
+
+
+INSERT
+	INTO
+	EXAM_EMP 
+	(EMPNO,
+	ENAME,
+	MGR,
+	HIREDATE,
+	SAL,
+	COMM,
+	DEPTNO)
+	VALUES (7201,TEST_USER1,'MANAGER', 7788, '2016-01-02', 4500, NULL, 50);
+
+
+
+
+
+
+
+
+
+
 
 
 
