@@ -1,9 +1,327 @@
-<mxfile host="app.diagrams.net" modified="2024-01-29T02:19:24.549Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" version="23.0.2" etag="wLbtWVlx6rjXYeEaxjY9" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-29T02:59:29.480Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="2uWZLf18k9oSZnw9mqBg" version="23.0.2" type="github">
   <diagram name="페이지-1" id="khb4IWp-zjTBe_Rk_N4d">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-2" value="회원" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="520" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-3" value="상품" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="520" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-4" value="아이디" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-5" value="비밀번호" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="450" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-7" value="이름" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-9" value="나이" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="570" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-11" value="직업" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-13" value="등급" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="670" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-14" value="적립금" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-15" value="상품번호" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="660" y="460" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-16" value="상품명" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="520" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-17" value="재고량" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="560" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-18" value="단가" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="600" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-21" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="520" as="sourcePoint" />
+            <mxPoint x="680" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-22" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="595" as="sourcePoint" />
+            <mxPoint x="690" y="575" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-24" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="532.5" as="sourcePoint" />
+            <mxPoint x="680" y="547.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-25" value="" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="581" as="sourcePoint" />
+            <mxPoint x="690" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-26" value="" style="endArrow=none;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=1.03;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-4" target="Uhlrcya_KOPxYMDIeTAT-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="420" as="sourcePoint" />
+            <mxPoint x="220" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-27" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="470" as="sourcePoint" />
+            <mxPoint x="210" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-28" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="550" as="sourcePoint" />
+            <mxPoint x="210" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-29" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="550" as="sourcePoint" />
+            <mxPoint x="210" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-30" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="595" as="sourcePoint" />
+            <mxPoint x="210" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-31" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="644" as="sourcePoint" />
+            <mxPoint x="267" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-32" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="687" as="sourcePoint" />
+            <mxPoint x="210" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-33" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="727" as="sourcePoint" />
+            <mxPoint x="210" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-34" value="게시글" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-35" value="글번호" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="70" y="870" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-40" value="제조업체" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="450" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-41" value="제조업체명" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="880" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-42" value="전화번호" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="920" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-43" value="위치" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-44" value="담당자" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1010" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-45" value="업체코드" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="650" y="830" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-46" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-40" target="Uhlrcya_KOPxYMDIeTAT-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="840" as="sourcePoint" />
+            <mxPoint x="650" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-48" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="970" as="sourcePoint" />
+            <mxPoint x="630" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-49" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-40" target="Uhlrcya_KOPxYMDIeTAT-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="1005" as="sourcePoint" />
+            <mxPoint x="630" y="935" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-50" value="" style="endArrow=none;html=1;rounded=0;entryX=0.02;entryY=0.8;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="980" as="sourcePoint" />
+            <mxPoint x="640" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-51" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="980" as="sourcePoint" />
+            <mxPoint x="630" y="1019.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-52" value="" style="endArrow=none;html=1;rounded=0;entryX=0.08;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="899.5" as="sourcePoint" />
+            <mxPoint x="210" y="930" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-54" value="" style="endArrow=none;html=1;rounded=0;entryX=0.08;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="920" as="sourcePoint" />
+            <mxPoint x="218" y="957.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="950.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-56" value="" style="endArrow=none;html=1;rounded=0;entryX=0.08;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="155.35533905932743" y="955.8578643762689" as="sourcePoint" />
+            <mxPoint x="218" y="990" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="983" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-57" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="155.35533905932743" y="1024.142135623731" as="sourcePoint" />
+            <mxPoint x="230" y="1024" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="204.64" y="1023.57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-59" value="주문" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-60" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="540" as="sourcePoint" />
+            <mxPoint x="370" y="539.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-62" value="M" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="305" y="518" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-64" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="539.5" as="sourcePoint" />
+            <mxPoint x="530" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-65" value="N" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="505" y="508" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-66" value="공급" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-67" value="글제목" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="70" y="910" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-68" value="Attribute" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="70" y="950" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-69" value="Attribute" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-70" value="Attribute" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-71" value="공급량" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="670" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-72" value="공급일자" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="710" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-73" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-71">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="700" as="sourcePoint" />
+            <mxPoint x="690" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-74" value="" style="endArrow=none;html=1;rounded=0;exitX=0.825;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-66">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="733" as="sourcePoint" />
+            <mxPoint x="670" y="727" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-75" value="주문번호" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="364" y="410" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-76" value="배송지" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="390" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-77" value="주문일자" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-78" value="주문수향" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="410" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-79" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-59" target="Uhlrcya_KOPxYMDIeTAT-78">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="469.5" as="sourcePoint" />
+            <mxPoint x="540" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-80" value="" style="endArrow=none;html=1;rounded=0;entryX=0.67;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-59" target="Uhlrcya_KOPxYMDIeTAT-75">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="367.42" y="508.42" as="sourcePoint" />
+            <mxPoint x="472.42" y="435.42" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-81" value="" style="endArrow=none;html=1;rounded=0;entryX=0.67;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="469" y="470" as="sourcePoint" />
+            <mxPoint x="480" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-82" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Uhlrcya_KOPxYMDIeTAT-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="510" as="sourcePoint" />
+            <mxPoint x="510" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-83" value="작성" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="185" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-86" value="" style="endArrow=none;html=1;rounded=0;entryX=0.36;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="244.5" y="760" as="sourcePoint" />
+            <mxPoint x="244.5" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-87" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="940" as="sourcePoint" />
+            <mxPoint x="246" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-90" value="" style="endArrow=none;html=1;rounded=0;entryX=0.158;entryY=0.717;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-66">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="549.5" y="940" as="sourcePoint" />
+            <mxPoint x="549.5" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Uhlrcya_KOPxYMDIeTAT-91" value="" style="endArrow=none;html=1;rounded=0;entryX=0.12;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Uhlrcya_KOPxYMDIeTAT-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="710" as="sourcePoint" />
+            <mxPoint x="539.54" y="553" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
